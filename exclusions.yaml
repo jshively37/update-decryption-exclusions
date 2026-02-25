@@ -1,4 +1,3 @@
-# List of domains to exclude from SSL Decryption
 exclusions:
   - domain: "localcreditunion.com"
     reason: "Financial Privacy"
