@@ -57,4 +57,5 @@ if __name__ == "__main__":
         domain = item.get("domain")
         reason = item.get("reason", "Automation Added")
         if domain:
+            print(f"Adding {domain}")
             update_decrpytion_exclusion(domain, reason)
