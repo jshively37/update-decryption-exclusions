@@ -20,6 +20,8 @@ AUTH_HEADERS = {
     "Accept": "application/json",
 }
 
+FOLDER = "Shared"
+
 load_dotenv()
 TSG_ID = os.environ.get("TSG_ID")
 CLIENT_ID = os.environ.get("CLIENT_ID")
@@ -41,7 +43,7 @@ def create_token():
 def update_decrpytion_exclusion(domain, description):
     payload = {"name": domain, "description": description}
 
-    params = {"tsg_id": TSG_ID, "folder": "Shared"}
+    params = {"tsg_id": TSG_ID, "folder": {FOLDER}}
 
     response = requests.post(
         EXCLUSION_URL, headers=HEADERS, params=params, json=payload
